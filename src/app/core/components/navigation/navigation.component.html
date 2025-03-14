@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/users">Users</a>
+          </li>
+          <!-- 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/create-customer">Create Customer</a> 
+          </li> -->
+          <!-- Add more menu items as needed -->
+        </ul>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+            @if (username){
+                <li class="nav-item dropdown " >
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle"></i> {{ username }}
+                    </button>
+                    @if (isAuthenticated){
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item btn" (click)="logout()">Logout</a></li>
+                      </ul>         
+                    }@else{
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item btn" (click)="loging()">Login</a></li>
+                      </ul> 
+                    }
+
+                </li>   
+            }
+        </ul>
+      </div>
+    </div>
+  </nav>
