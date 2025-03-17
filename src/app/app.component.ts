@@ -6,7 +6,8 @@ import { NavigationComponent } from './core/components/navigation/navigation.com
   selector: 'app-root',
   imports: [RouterOutlet,NavigationComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  standalone: true
 })
 export class AppComponent {
   title = 'angular-custom-element-app';

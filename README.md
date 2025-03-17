@@ -2,6 +2,10 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 
+## Author
+José Luis Olivares
+
+
 ## Development server
 
 To start a local development server, run:
@@ -28,10 +32,16 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+To build the project run :
 
 ```bash
 ng build
+```
+
+Alternativa para eliminar el hashing del archivo main
+
+```bash
+ng build --configuration=production --output-hashing=none
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
