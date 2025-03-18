@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './core/components/navigation/navigation.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'sam-hardware', //sustituimos el selector por el nombre del custom element, antes app-root
   imports: [RouterOutlet,NavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
